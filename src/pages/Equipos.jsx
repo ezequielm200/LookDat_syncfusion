@@ -4,7 +4,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective, Page, Search, Inject,
 import {  equiposGrid } from '../data/dummy'
 import { Header } from '../components'
 
-const Employees = () => {
+const Equipos = () => {
 
   const [equipos, setEquipos] = useState([]);
   useEffect(() => {
@@ -36,4 +36,4 @@ const Employees = () => {
   )
 }
 
-export default Employees
+export default Equipos

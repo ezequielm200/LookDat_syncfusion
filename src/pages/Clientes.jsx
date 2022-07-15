@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState, useEffect} from 'react'
 import {
   GridComponent,
   ColumnsDirective,
@@ -15,12 +15,24 @@ import {
 import { customersData, customersGrid } from "../data/dummy";
 import { Header } from "../components";
 
-const Customers = () => {
+const Clientes = () => {
+
+  const [clientes, setClientes] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("http://localhost:3050/api/clientes");
+      const clientes = await response.json();
+      setClientes(clientes.clientes);
+    }
+
+    fetchData();
+    console.log(clientes);
+  }, []);
   return (
     <div className="m-2 md:m-1 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="Page" title="Customers" />
+      <Header category="Page" title="Clientes" />
       <GridComponent
-        dataSource={customersData}
+        dataSource={clientes}
         allowPaging
         allowSorting
         toolbar={["Delete"]}
@@ -38,4 +50,4 @@ const Customers = () => {
   );
 };
 
-export default Customers;
+export default Clientes;

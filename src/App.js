@@ -5,12 +5,12 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
   Ecommerce,
-  Orders,
+  Ordenes,
   Calendar,
-  Employees,
+  Usuarios,
   Stacked,
   Pyramid,
-  Customers,
+  Clientes,
   Kanban,
   Area,
   Bar,
@@ -77,10 +77,10 @@ const App = () => {
                 <Route path="/ecommerce" element={<Ecommerce />} />
 
                 {/* Pages */}
-                <Route path="/orders" element={<Orders />} />
+                <Route path="/ordenes" element={<Ordenes />} />
                 <Route path="/equipos" element={<Equipos />} />
-                <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
+                <Route path="/usuarios" element={<Usuarios />} />
+                <Route path="/clientes" element={<Clientes />} />
 
                 {/* Apps */}
                 <Route path="/calendar" element={<Calendar />} />

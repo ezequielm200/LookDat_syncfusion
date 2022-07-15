@@ -4,7 +4,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective, Page, Search, Inject,
 import { employeesData, employeesGrid } from '../data/dummy'
 import { Header } from '../components'
 
-const Employees = () => {
+const Usuarios = () => {
   return (
     <div className="m-2 md:m-1 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Employees"/>
@@ -25,4 +25,4 @@ const Employees = () => {
   )
 }
 
-export default Employees
+export default Usuarios
